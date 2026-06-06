@@ -1,4 +1,4 @@
--- Schema definition for Pazago Assignment
+--Schema definition for Pazago Assignment
 
 DROP TABLE IF EXISTS holdings CASCADE;
 DROP TABLE IF EXISTS fund_nav CASCADE;

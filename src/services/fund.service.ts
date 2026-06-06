@@ -13,7 +13,7 @@ export interface FundPerformance {
 }
 
 /**
- * Gets the latest (most recent) NAV for a given fund ID.
+  Gets the latest (most recent) NAV for a given fund ID.
  */
 export async function getCurrentNAV(fundId: string): Promise<number | null> {
   const query = `

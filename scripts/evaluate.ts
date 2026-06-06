@@ -91,8 +91,8 @@ async function runEvaluation() {
     const dbTopMerchants = await transactionService.getTopMerchants(limit);
     assertEqual("getTopMerchants count", dbTopMerchants.length, limit);
     for (let i = 0; i < limit; i++) {
-      assertEqual(`getTopMerchants Rank ${i+1} Name`, dbTopMerchants[i]?.merchant, jsonTopMerchants[i]?.merchant);
-      assertEqual(`getTopMerchants Rank ${i+1} Spend`, dbTopMerchants[i]?.totalSpend, jsonTopMerchants[i]?.totalSpend);
+      assertEqual(`getTopMerchants Rank ${i + 1} Name`, dbTopMerchants[i]?.merchant, jsonTopMerchants[i]?.merchant);
+      assertEqual(`getTopMerchants Rank ${i + 1} Spend`, dbTopMerchants[i]?.totalSpend, jsonTopMerchants[i]?.totalSpend);
     }
 
     // getMonthlySpend
@@ -111,7 +111,7 @@ async function runEvaluation() {
     assertEqual(`getMonthlySpend(${testMonth}, ${testYear})`, dbMonthlySpend, jsonMonthlySpend);
 
 
-    // --- EVALUATE FUNDS ---
+    //EVALUATE FUNDS
     console.log("\n--- 2. Evaluating Fund Service ---");
 
     // getCurrentNAV
@@ -153,7 +153,7 @@ async function runEvaluation() {
     assertEqual("getBestPerformingFund ID", dbBestFund?.fundId, jsonBestFund?.id);
 
 
-    // --- EVALUATE PORTFOLIO ---
+    //EVALUATE PORTFOLIO
     console.log("\n--- 3. Evaluating Portfolio Service ---");
 
     // getPortfolioValue
@@ -203,7 +203,7 @@ async function runEvaluation() {
     assertEqual("getTotalInvestedAmount", dbTotalInvested, jsonTotalInvested);
 
 
-    // --- FINAL RESULTS ---
+    //FINAL RESULTS
     console.log(`\n==================================================`);
     console.log(`              EVALUATION REPORT SUMMARY           `);
     console.log(`==================================================`);

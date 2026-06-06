@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-db": "tsx test_db.ts",
+    "setup": "tsx scripts/setup.ts",
     "ingest": "tsx scripts/ingest.ts",
     "test-tx-service": "tsx test_transaction_service.ts",
     "test-fund-service": "tsx test_fund_service.ts",
